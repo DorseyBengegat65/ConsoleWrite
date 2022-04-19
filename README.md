@@ -1,0 +1,2 @@
+# ConsoleWrite
+Array.au3> #include &lt;String.au3>  Example()  Func Example()     Local $sStr = "" ; Monster string for testing     For $i = 1 To 10000000         $sStr &amp;= Chr(Random(1, 255, 1))     Next      MsgBox(0, "First 300 out of 10000000 Chracters", StringLeft($sStr, 300))     Local $sDelim = _GetDelim($sStr)     If Not @error Then         ConsoleWrite("&lt;---| " &amp; $sDelim &amp; " |--->" &amp; @LF)     Else         ConsoleWrite("&lt;---| FAILED |--->" &amp; @LF)     EndIf EndFunc
